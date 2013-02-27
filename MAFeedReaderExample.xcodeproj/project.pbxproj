@@ -166,7 +166,7 @@
 				B33165D616DE23F6000F67BA /* MainStoryboard_iPad.storyboard */,
 				B33165E116DE2421000F67BA /* ArticleTableViewController.h */,
 				B33165E216DE2421000F67BA /* ArticleTableViewController.m */,
-				B331660516DE2B0D000F67BA /* TouchXML-ARC */,
+				B33165E716DE2801000F67BA /* MAFeedReader */,
 				B331663016DE2B1B000F67BA /* 3rd Party Libraries */,
 				B33165C216DE23F6000F67BA /* Supporting Files */,
 			);
@@ -275,8 +275,8 @@
 		B331663016DE2B1B000F67BA /* 3rd Party Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				B331660516DE2B0D000F67BA /* TouchXML-ARC */,
 				B33165E816DE2A9D000F67BA /* AFNetworking */,
-				B33165E716DE2801000F67BA /* MAFeedReader */,
 			);
 			name = "3rd Party Libraries";
 			sourceTree = "<group>";
