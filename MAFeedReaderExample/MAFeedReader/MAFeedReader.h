@@ -15,6 +15,8 @@
 +(id)sharedReader;
 
 -(void)requestNewsArticlesFromFeed:(NSURL *)feedURL;
--(NSArray *)articles;
+-(void)requestNewsArticlesFromFeed:(NSURL *)feedURL withCompletionHandler:(void (^)(NSArray *articles))block;
+-(NSArray *)getArticles;
+-(NSInteger)getNewArticleCount;
 
 @end

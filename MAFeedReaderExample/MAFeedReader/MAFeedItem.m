@@ -21,4 +21,9 @@
 	return self;
 }
 
+-(NSString *)description {
+	NSString *description = [super description];
+	return [description stringByAppendingFormat:@" Title: %@, Date: %@", self.title, [self.datePublished description]];
+}
+
 @end

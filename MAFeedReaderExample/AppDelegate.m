@@ -14,8 +14,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 	NSURL *feedURL = [NSURL URLWithString:@"http://www.nexus.org.uk/news.xml"];
-	[[MAFeedReader sharedReader] requestNewsArticlesFromFeed:feedURL];
+	MAFeedReader *feedReader= [MAFeedReader sharedReader];
 	
+	[feedReader requestNewsArticlesFromFeed:feedURL withCompletionHandler:^(NSArray *articles) {
+		NSLog(@"Articles: %@", articles);
+		NSLog(@"Found %d new articles.", [feedReader getNewArticleCount]);
+	}];
+
 	return YES;
 }
 							

@@ -17,6 +17,8 @@ static NSString *kMAFeedReaderLastUpdated = @"kMAFeedReaderLastUpdated";
 
 @property (nonatomic, strong) NSArray *articles;
 @property (nonatomic, strong) NSDate *lastUpdated;
+@property (nonatomic, assign) NSInteger newArticlesSinceLastUpdate;
+@property (nonatomic, copy) void(^completionBlock)(NSArray *array);
 
 @end
 
@@ -35,10 +37,17 @@ static NSString *kMAFeedReaderLastUpdated = @"kMAFeedReaderLastUpdated";
 
 #pragma mark - public methods
 
--(NSArray *)articles {
+-(NSArray *)getArticles {
 	return self.articles;
 }
 
+-(NSInteger)getNewArticleCount {
+	return self.newArticlesSinceLastUpdate;
+}
+
+// Get articles from a given URL, count how many are new and update the time we last checked.
+// Fetched articles are stored in the self.articles array.
+// Once the network request completes, we call the completion handler if it exists.
 -(void)requestNewsArticlesFromFeed:(NSURL *)feedURL {
 	NSURLRequest *urlRequest = [NSURLRequest requestWithURL:feedURL];
 	AFURLConnectionOperation *operation = [[AFURLConnectionOperation alloc] initWithRequest:urlRequest];
@@ -46,13 +55,30 @@ static NSString *kMAFeedReaderLastUpdated = @"kMAFeedReaderLastUpdated";
 	[operation setCompletionBlock:^{
 		self.articles = [self translateXMLString:[_operation responseString]];
 		
-		//TODO: compute how many articles are new, based on our last known check date
+		NSInteger newArticleCount = 0;
+		for(MAFeedItem *article in self.articles) {
+			if([[[article datePublished] laterDate:self.lastUpdated] isEqualToDate:[article datePublished]]) {
+				newArticleCount++;
+			}
+		}
+		self.newArticlesSinceLastUpdate = newArticleCount;
 		
 		[[NSUserDefaults standardUserDefaults] setObject:[NSDate date] forKey:kMAFeedReaderLastUpdated];
 		[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+		
+		if(self.completionBlock) {
+			self.completionBlock(self.articles);
+		}
 	}];
 	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
 	[operation start];
+}
+
+-(void)requestNewsArticlesFromFeed:(NSURL *)feedURL withCompletionHandler:(void (^)(NSArray *articles))block {
+	if(block) {
+		self.completionBlock = block;
+	}
+	[self requestNewsArticlesFromFeed:feedURL];
 }
 
 #pragma mark - internal methods
@@ -68,9 +94,9 @@ static NSString *kMAFeedReaderLastUpdated = @"kMAFeedReaderLastUpdated";
 	return self;
 }
 
-//Return an array of articles for a given RSS xml string
-//NB - limited to only return 10 articles
-//This is also reliant on the date format matching EEE, dd MMM yyyy HH:mm:ss ZZZ 
+// Return an array of articles for a given RSS xml string
+// NB - limited to only return 10 articles
+// This is also reliant on the date format matching "EEE, dd MMM yyyy HH:mm:ss ZZZ"
 -(NSArray *)translateXMLString:(NSString *)xml {
 	NSError *error = nil;
 	CXMLDocument *xmlContent = [[CXMLDocument alloc] initWithXMLString:xml options:0 error:&error];
