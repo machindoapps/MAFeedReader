@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ArticleTableViewController.h
 //  MAFeedReaderExample
 //
 //  Created by David Haynes on 27/02/2013.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ArticleTableViewController : UITableViewController
 
 @end
