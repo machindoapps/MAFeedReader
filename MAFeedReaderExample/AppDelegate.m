@@ -7,11 +7,15 @@
 //
 
 #import "AppDelegate.h"
+#import "MAFeedReader.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+	NSURL *feedURL = [NSURL URLWithString:@"http://www.nexus.org.uk/news.xml"];
+	[[MAFeedReader sharedReader] requestNewsArticlesFromFeed:feedURL];
+	
 	return YES;
 }
 							

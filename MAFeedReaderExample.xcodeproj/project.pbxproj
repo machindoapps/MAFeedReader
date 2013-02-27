@@ -43,6 +43,9 @@
 		B331662E16DE2B0D000F67BA /* CXMLNode_XPathExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = B331661E16DE2B0D000F67BA /* CXMLNode_XPathExtensions.m */; };
 		B331662F16DE2B0D000F67BA /* CTidy.m in Sources */ = {isa = PBXBuildFile; fileRef = B331662116DE2B0D000F67BA /* CTidy.m */; };
 		B331663216DE2BAE000F67BA /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B331663116DE2BAE000F67BA /* libxml2.dylib */; };
+		B331663516DE4C6B000F67BA /* MAFeedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B331663416DE4C6A000F67BA /* MAFeedItem.m */; };
+		B331663816DE4CD1000F67BA /* NSString+StripHtml.m in Sources */ = {isa = PBXBuildFile; fileRef = B331663716DE4CD0000F67BA /* NSString+StripHtml.m */; };
+		B331663B16DE5008000F67BA /* CXMLElement+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = B331663A16DE5007000F67BA /* CXMLElement+Utils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -112,6 +115,12 @@
 		B331662116DE2B0D000F67BA /* CTidy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTidy.m; sourceTree = "<group>"; };
 		B331662216DE2B0D000F67BA /* TouchXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchXML.h; sourceTree = "<group>"; };
 		B331663116DE2BAE000F67BA /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		B331663316DE4C6A000F67BA /* MAFeedItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MAFeedItem.h; path = MAFeedReader/MAFeedItem.h; sourceTree = "<group>"; };
+		B331663416DE4C6A000F67BA /* MAFeedItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MAFeedItem.m; path = MAFeedReader/MAFeedItem.m; sourceTree = "<group>"; };
+		B331663616DE4CD0000F67BA /* NSString+StripHtml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+StripHtml.h"; sourceTree = "<group>"; };
+		B331663716DE4CD0000F67BA /* NSString+StripHtml.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+StripHtml.m"; sourceTree = "<group>"; };
+		B331663916DE5007000F67BA /* CXMLElement+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CXMLElement+Utils.h"; sourceTree = "<group>"; };
+		B331663A16DE5007000F67BA /* CXMLElement+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CXMLElement+Utils.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,7 +141,6 @@
 		B33165AF16DE23F6000F67BA = {
 			isa = PBXGroup;
 			children = (
-				B331663116DE2BAE000F67BA /* libxml2.dylib */,
 				B33165C116DE23F6000F67BA /* MAFeedReaderExample */,
 				B33165BA16DE23F6000F67BA /* Frameworks */,
 				B33165B916DE23F6000F67BA /* Products */,
@@ -150,6 +158,7 @@
 		B33165BA16DE23F6000F67BA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B331663116DE2BAE000F67BA /* libxml2.dylib */,
 				B33165BB16DE23F6000F67BA /* UIKit.framework */,
 				B33165BD16DE23F6000F67BA /* Foundation.framework */,
 				B33165BF16DE23F6000F67BA /* CoreGraphics.framework */,
@@ -192,6 +201,12 @@
 			children = (
 				B33165E416DE27D6000F67BA /* MAFeedReader.h */,
 				B33165E516DE27D6000F67BA /* MAFeedReader.m */,
+				B331663316DE4C6A000F67BA /* MAFeedItem.h */,
+				B331663416DE4C6A000F67BA /* MAFeedItem.m */,
+				B331663616DE4CD0000F67BA /* NSString+StripHtml.h */,
+				B331663716DE4CD0000F67BA /* NSString+StripHtml.m */,
+				B331663916DE5007000F67BA /* CXMLElement+Utils.h */,
+				B331663A16DE5007000F67BA /* CXMLElement+Utils.m */,
 			);
 			name = MAFeedReader;
 			sourceTree = "<group>";
@@ -374,6 +389,9 @@
 				B331662D16DE2B0D000F67BA /* CXMLNode_PrivateExtensions.m in Sources */,
 				B331662E16DE2B0D000F67BA /* CXMLNode_XPathExtensions.m in Sources */,
 				B331662F16DE2B0D000F67BA /* CTidy.m in Sources */,
+				B331663516DE4C6B000F67BA /* MAFeedItem.m in Sources */,
+				B331663816DE4CD1000F67BA /* NSString+StripHtml.m in Sources */,
+				B331663B16DE5008000F67BA /* CXMLElement+Utils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

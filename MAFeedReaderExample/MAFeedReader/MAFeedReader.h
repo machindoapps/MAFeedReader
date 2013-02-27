@@ -10,11 +10,11 @@
 
 @interface MAFeedReader : NSObject
 
-@property (nonatomic, strong) NSArray *articles;
 
 //Singleton accessor
 +(id)sharedReader;
 
-
+-(void)requestNewsArticlesFromFeed:(NSURL *)feedURL;
+-(NSArray *)articles;
 
 @end
