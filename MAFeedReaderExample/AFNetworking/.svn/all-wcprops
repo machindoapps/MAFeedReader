@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/nexus/!svn/ver/41/trunk/Nexus/Nexus/AFNetworking
+END
+AFHTTPClient.m
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/nexus/!svn/ver/41/trunk/Nexus/Nexus/AFNetworking/AFHTTPClient.m
+END
+AFNetworking.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/nexus/!svn/ver/41/trunk/Nexus/Nexus/AFNetworking/AFNetworking.h
+END
+AFXMLRequestOperation.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/nexus/!svn/ver/41/trunk/Nexus/Nexus/AFNetworking/AFXMLRequestOperation.h
+END
+AFNetworkActivityIndicatorManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/nexus/!svn/ver/41/trunk/Nexus/Nexus/AFNetworking/AFNetworkActivityIndicatorManager.h
+END
+UIImageView+AFNetworking.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/nexus/!svn/ver/41/trunk/Nexus/Nexus/AFNetworking/UIImageView+AFNetworking.h
+END
+AFXMLRequestOperation.m
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/nexus/!svn/ver/41/trunk/Nexus/Nexus/AFNetworking/AFXMLRequestOperation.m
+END
+AFURLConnectionOperation.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/nexus/!svn/ver/41/trunk/Nexus/Nexus/AFNetworking/AFURLConnectionOperation.h
+END
+AFNetworkActivityIndicatorManager.m
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/nexus/!svn/ver/41/trunk/Nexus/Nexus/AFNetworking/AFNetworkActivityIndicatorManager.m
+END
+AFJSONRequestOperation.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/nexus/!svn/ver/41/trunk/Nexus/Nexus/AFNetworking/AFJSONRequestOperation.h
+END
+UIImageView+AFNetworking.m
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/nexus/!svn/ver/41/trunk/Nexus/Nexus/AFNetworking/UIImageView+AFNetworking.m
+END
+AFURLConnectionOperation.m
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/nexus/!svn/ver/41/trunk/Nexus/Nexus/AFNetworking/AFURLConnectionOperation.m
+END
+AFJSONRequestOperation.m
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/nexus/!svn/ver/41/trunk/Nexus/Nexus/AFNetworking/AFJSONRequestOperation.m
+END
+AFHTTPRequestOperation.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/nexus/!svn/ver/41/trunk/Nexus/Nexus/AFNetworking/AFHTTPRequestOperation.h
+END
+AFPropertyListRequestOperation.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/nexus/!svn/ver/41/trunk/Nexus/Nexus/AFNetworking/AFPropertyListRequestOperation.h
+END
+AFImageRequestOperation.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/nexus/!svn/ver/41/trunk/Nexus/Nexus/AFNetworking/AFImageRequestOperation.h
+END
+AFHTTPRequestOperation.m
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/nexus/!svn/ver/41/trunk/Nexus/Nexus/AFNetworking/AFHTTPRequestOperation.m
+END
+AFHTTPClient.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/nexus/!svn/ver/41/trunk/Nexus/Nexus/AFNetworking/AFHTTPClient.h
+END
+AFPropertyListRequestOperation.m
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/nexus/!svn/ver/41/trunk/Nexus/Nexus/AFNetworking/AFPropertyListRequestOperation.m
+END
+AFImageRequestOperation.m
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/nexus/!svn/ver/41/trunk/Nexus/Nexus/AFNetworking/AFImageRequestOperation.m
+END
